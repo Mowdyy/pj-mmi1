@@ -1,0 +1,129 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --background-color: #33343e;
+    --input-color: #4f4f5d;
+    --item-color: #98999f;
+    --red: #FF4E64;
+    --red-shadow: rgba(255, 63, 63, 0.69);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    height: auto;
+}
+
+.onglet {
+    width: 90vw;
+    height: auto;
+    margin: 5vh auto 0;
+}
+
+h1 {
+    font-size: 2.1em;
+    font-family: "Montserrat";
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 0.8em;
+    font-family: "Montserrat";
+    color: white;
+    font-weight: 400;
+    margin-bottom: 10%;
+    line-height: 150%;
+    
+}
+
+.parcourir h1, .parcourir h2 {
+    margin-left: 2.5%;
+}
+
+@media (min-width: 540px) {
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-size: 0.9em;
+        max-width: 70vw;
+    }
+    
+    .parcourir h1, .parcourir h2 {
+        margin-left: 12.5%;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    h1 {
+        font-size: 2.9em;
+    }
+    
+    h2 {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .onglet {
+        width: 50vw;
+    }
+    
+    h1 {
+        font-size: 3.3em;
+        margin-bottom: 40px;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+    }
+    
+    .parcourir h1 {
+        margin-left: 0;
+    }
+    
+    .parcourir h2 {
+        margin: 0 0 15%;
+    }
+}
+
+@media (min-width: 1280px) {
+    
+    h1 {
+        font-size: 3.7em;
+    }
+}
+
+@media (min-width: 1536px) {
+    
+    .onglet {
+        margin-top: 0;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .parcourir h2 {
+        margin-left: 0.2%;
+        margin-bottom: 10%;
+    }
+}

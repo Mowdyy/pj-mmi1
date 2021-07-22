@@ -1,0 +1,331 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --h1-taille-mobile: 2em;
+    --h1-taille-desk: 3em;
+    --p-taille-mobile: 1em;
+    --p-taille-desk: 1.3em;
+    --background-color: #33343e;
+    --input-color: #4f4f5d;
+    --item-color: #98999f;
+    --red: #FF4E64;
+    --red-shadow: rgba(255, 63, 63, 0.69);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.header-accueil a, .header-accueil p {
+    color: var(--item-color);
+}
+
+.header-accueil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    background: #2e2f38;
+    padding: 0 3vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    display: none;
+}
+
+.logo-phone {
+    object-fit: contain;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.header-accueil a {
+    text-decoration: none;
+}
+
+.header-accueil .voyant {
+    font-family: "Montserrat";
+    font-size: 0.75em;
+    text-align: center;
+    font-weight: 600;
+    background: var(--red);
+    padding: 1vh;
+    border-radius: 5px;
+    color: white;
+    box-shadow: var(--red-shadow) 0 0 20px;
+}
+
+.header-accueil .discret a {
+    font: 800 0.75em "Montserrat";
+    padding: 1vh;
+    color: var(--item-color);
+    background: transparent;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-accueil .discret {
+    font: 800 1em "Montserrat";
+    padding: 1vh;
+    background: transparent;
+    text-decoration: none;
+}
+
+.header-accueil .deco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-accueil i + *,
+.logo-phone + *{
+    display: none;
+}
+
+.recherche {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.recherche input {
+    height: 3.5vh;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid 1px;
+    border: none;
+    background: var(--input-color);
+    color: #d4d4d4;
+    padding: 0 5px;
+    font-family: "Montserrat";
+    font-size: 0.75em;
+    font-weight: 500;
+    width: 80%;
+}
+
+.recherche input::placeholder {
+    font-family: "Montserrat";
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.recherche input:-webkit-autofill,
+.recherche input:-webkit-autofill:hover,
+.recherche input:-webkit-autofill:focus {
+    -webkit-background: black !important;
+}
+
+.recherche input::-webkit-search-decoration,
+.recherche input::-webkit-search-cancel-button,
+.recherche input::-webkit-search-results-button,
+.recherche input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.recherche input:focus,
+.recherche button:focus {
+    outline: none;
+}
+
+.recherche button {
+    height: 3.5vh;
+    width: 3.5vh;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: var(--item-color);
+    color: var(--input-color);
+    cursor: pointer;
+}
+
+.menu {
+    background: #2e2f38;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100vw;
+    left: 0;
+    z-index: 10;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 20px 30px;
+}
+
+.menu li {
+    display: flex;
+    margin: auto 0;
+    text-align: center;
+    font: 600 0.5em "Montserrat";
+    list-style: none;
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 2px;
+    width: 50px;
+    height: auto;
+    color: var(--item-color);
+}
+
+.menu .fas,
+.menu .far {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.colored {
+    color: #4c75ff;
+}
+
+@media (min-width: 768px) {
+
+    .logo {
+        width: 70px;
+        display: block;
+        margin-right: 100px;
+        -webkit-filter: drop-shadow(0px 0px 6px #ff0045);
+        -moz-filter: drop-shadow(0px 0px 6px #ff0045);
+    }
+
+    .recherche input {
+        width: 30vw;
+    }
+
+    .recherche {
+        width: auto;
+    }
+
+    .menu {
+        padding: 0 15%;
+    }
+
+    .menu li {
+        font-size: 0.6em;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .recherche {
+
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+
+    .header-accueil {
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-accueil * {
+        margin: 0;
+    }
+
+    .logo {
+        margin-right: 0px;
+    }
+
+    .recherche {
+        width: auto;
+        margin: 0;
+    }
+
+    .recherche input {
+        width: 300px;
+    }
+
+    .recherche input,
+    .recherche input::placeholder {
+        font-size: 0.9em
+    }
+
+    .header-accueil .voyant {
+        font-size: 0.85em;
+        padding: 15px 25px;
+    }
+
+    .header-accueil .voyant:hover,
+    .header-accueil .discret:hover,
+    .recherche input:hover,
+    .recherche button:hover,
+    .recherche input:focus {
+        filter: brightness(0.95);
+    }
+
+    .menu {
+        width: 25%;
+        height: 100%;
+        padding: 0;
+        position: relative;
+        margin-right: 50px;
+    }
+
+    .menu ul {
+        height: 100%;
+        padding: 0;
+    }
+
+    .menu i:last-child {
+        display: block;
+        font-style: normal;
+    }
+
+    .menu a {
+        width: auto;
+        padding: 10px;
+    }
+
+    .menu a:hover {
+        color: var(--red);
+    }
+
+    .menu li {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+        width: auto;
+    }
+
+    .menu li:last-child,
+    .menu i:first-child,
+    .logo-phone {
+        display: none;
+    }
+
+    .header-accueil .discret a {
+        font-size: 0.9em;
+        padding: 35px 20px;
+        font-weight: 700;
+    }
+
+    .header-accueil .discret a:hover {
+        color: white;
+    }
+}
